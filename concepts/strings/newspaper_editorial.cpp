@@ -2,7 +2,19 @@
 #include <vector>
 #include <string>
 using namespace std;
-
+/*
+[["hello", "world"], ["I", "am", "newspaper"], ["edits"], ["this", "is", "a", "test"], ["what", "up"]] to 
+******************
+*  hello  world  *
+* I am newspaper *
+*      edits     *
+* this is a test *
+*    what   up   *
+******************
+to 
+[["******************"],["*  hello  world  *"], 
+["* I am newspaper *"], ["*      edits     *"], ["* this is a test *"], ["*    what   up   *"], ["******************"]]
+*/
 string buildCenteredLine(const vector<string>& words, int width) {
     int totalChars = 0;
     for (const string& word : words) totalChars += word.length();
